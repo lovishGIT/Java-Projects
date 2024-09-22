@@ -1,0 +1,16 @@
+try {
+    clss2 obj = new clss2();
+    obj.mainTask(5);
+
+    synchronized (obj) {
+        obj.wait(2000);
+    } // waiting for 2 seconds
+
+    obj.mainTask(10);
+
+    } catch (InterruptedException ex) { // An exception when a thread is waiting, sleeping, or otherwise occupied, and the thread is interrupted, either before or during the activity.
+        System.out.println("Exception: " + ex);
+}
+
+BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
